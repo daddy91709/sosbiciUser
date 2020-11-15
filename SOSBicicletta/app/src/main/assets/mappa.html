@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	
+     <!---MAPPA--->
+	     <meta name="viewport" content="initial-scale=1.0">
+	     <meta charset="utf-8">
+	     <style>       
+	         #map {height: 100%;}       
+	         html, body {height: 100%; margin: 0; padding: 0;} 
+	     </style>
+</head>	
+<body> 
+
+<!-- The core Firebase JS SDK is always required and must be listed first --> <!--Core dell'SDK javascript per Firebase-->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD5WmsdiBVot5Hs-aGSPp76s2OSQQnoCNk",
+    authDomain: "sosbici.firebaseapp.com",
+    databaseURL: "https://sosbici.firebaseio.com",
+    projectId: "sosbici",
+    storageBucket: "gs://sosbici.appspot.com",
+    messagingSenderId: "581093767057",
+    appId: "1:581093767057:web:3794da7858f73a1375cc30",
+    measurementId: "G-PG7HWLB143"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  
+  <!--tentativo di importare i file dallo storage di firebase-->
+     var storage = firebase.storage();
+     var user = storage.refFromURL('gs://sosbici.appspot.com/user.png');
+  
+	 
+  <!--provo a far funzionare il live database--> 
+  database= firebase.database();
+  val ref= database.ref('sosbici/pos_risciò/risciò');
+   var r1={lat= null, lng= null};
+  ref.on('value'){
+  r1.lat=
+  };  
+  
+</script>
+
+<!--script della mappa-->   
+<div id="map"></div>     
+	
+	
+	
+     <script>
+	 
+	 var mylocation= {lat:41.4863, lng: 12.6188};
+	 
+	 var r1= {lat: 41.4832, lng: 12.6157};
+	 var r2= {lat: 41.4892, lng: 12.6127};
+	 var r3= {lat: 41.4857, lng: 12.6197};
+	 var r4= {lat: 41.4857, lng: 12.6257};
+	 
+	 var map;  
+	 
+         <!--inizializzazione mappa--> 
+	     function initMap() 
+	{    map = new google.maps.Map(document.getElementById('map'), 
+	    {center: mylocation, zoom: 15});
+		
+		<!--markers-->
+		var marker = new google.maps.Marker(
+		     { position: mylocation, map:map, animation: google.maps.Animation.BOUNCE, title: 'La mia posizione', draggable:false, icon: "http://maps.google.com/mapfiles/kml/paddle/grn-blank.png" }); 		 		       
+	    
+		var marker1 = new google.maps.Marker(
+		     { position: r1, map:map, animation: google.maps.Animation.DROP, title: 'Risciò 1', draggable:false, icon: "http://maps.google.com/mapfiles/kml/paddle/1.png"});
+	
+	    var marker2 = new google.maps.Marker(
+		     { position: r2, map:map, animation: google.maps.Animation.DROP, title: 'Risciò 2', draggable:false, icon: "http://maps.google.com/mapfiles/kml/paddle/2.png"});
+	
+	    var marker3 = new google.maps.Marker(
+		     { position: r3, map:map, animation: google.maps.Animation.DROP, title: 'Risciò 3', draggable:false, icon: "http://maps.google.com/mapfiles/kml/paddle/3.png"});
+	
+       	var marker4 = new google.maps.Marker(
+		     { position: r4, map:map, animation: google.maps.Animation.DROP, title: 'Risciò 4', draggable:false, icon: "http://maps.google.com/mapfiles/kml/paddle/4.png"});
+	
+	
+	}</script> 
+    
+	 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbdWYrr55gAnrpzjgZeN6KWj0LhF0iIIE&callback=initMap"     async defer></script>
+		
+</body> 
+</html>
+		 
+		 
+		 
+		 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item android:title="APP">
+        <menu>
+
+            <item android:title="Sei un Driver?"
+                android:id="@+id/driverM"
+                android:icon="@drawable/baseline_directions_bike_black_24dp"/>
+            <item android:title="Informazioni"
+                android:id="@+id/infom"
+                android:icon="@drawable/baseline_info_black_24dp" />
+        </menu>
+    </item>
+
+    <item android:title="INFORMAZIONI">
+        <menu>
+
+            <item android:title="Chi Siamo"
+                android:id="@+id/chisiamoM"
+                android:icon="@drawable/ic_baseline_people_24" />
+            <item android:title="Mobility Evolution"
+                android:id="@+id/mobeM"
+                android:icon="@drawable/ic_baseline_star_24" />
+
+        </menu>
+    </item>
+
+
+
+</menu>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "23539992383",
+    "firebase_url": "https://sosbicicletta.firebaseio.com",
+    "project_id": "sosbicicletta",
+    "storage_bucket": "sosbicicletta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23539992383:android:b71020e88b43d455c3758a",
+        "android_client_info": {
+          "package_name": "com.example.sosbicicletta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23539992383-0mb85bjcldth3m16bmrjl42nsiq0a2ut.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sosbicicletta",
+            "certificate_hash": "02f04dbbd37cd6a91d2e820ebe1166e05680bc28"
+          }
+        },
+        {
+          "client_id": "23539992383-63st09l618bpqpgijfvo0erpqq7dpv9h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTHUZYWDngfMbpO1Bx1j8iE765S8UEmfg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23539992383-63st09l618bpqpgijfvo0erpqq7dpv9h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
